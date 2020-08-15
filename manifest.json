@@ -1,0 +1,11 @@
+{
+    "name": "twms",
+    "content_scripts": [
+        {
+            "matches": ["https://twitter.com/*"],
+            "js": ["main.js"]
+        }
+    ],
+    "manifest_version": 2,
+    "version": "0.0.1"
+}
