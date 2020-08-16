@@ -50,7 +50,7 @@ function _main() {
             tweet.innerHTML = calc(location.href.split("/").slice(-1)[0], false);
         }
     }
-    const tweets = document.querySelectorAll(`a[href*="/status/"][dir="auto"][role="link"]:not([href$="/likes"]):not([href*="retweets"])`);
+    const tweets = document.querySelectorAll(`a[href*="/status/"][dir="auto"][role="link"]:not([href$="/likes"]):not([href*="retweets"]):not([href*="media_tags"])`);
     tweets.forEach(tweet => {
         let id = tweet["href"].split("/").slice(-1)[0];
         tweet.innerHTML = calc(id);
