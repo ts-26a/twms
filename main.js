@@ -43,7 +43,10 @@ function calc(_id, x) {
 function _main() {
     if (location.href.match(/.*\/status\/[0-9]+/) != null) {
         let tweet = document.querySelector(`#react-root > div > div > div > main > div > div > div > div > div > div:nth-child(2) > div > section > div > div > div > div > div > article > div > div > div > div:nth-child(3) > div > div > div > a[href*="/status/"] > span`);
-        if (tweet != null) {
+        if (tweet === null) {
+            tweet = document.querySelector('#react-root > div > div > div > main > div > div > div > div > div > div > div:nth-child(2) > div > section > div > div > div:nth-child(1) > div > div > article > div > div > div > div:nth-child(3) > div > div > div > a:nth-child(1) > span');
+        }
+        if (tweet !== null) {
             tweet.innerHTML = calc(location.href.split("/").slice(-1)[0], false);
         }
     }
