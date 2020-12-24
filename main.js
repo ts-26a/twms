@@ -55,7 +55,7 @@ function _main() {
 }
 
 function main() {
-    setInterval(_main, 500);
+    setInterval(_main, 300);
 }
 
 main();
